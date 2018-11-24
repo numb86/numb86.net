@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
+
+import Header from "../components/header";
 
 const LINK_LIST = [
   { text: "技術ブログ", url: "http://numb86-tech.hatenablog.com/" },
@@ -13,9 +14,7 @@ const LINK_LIST = [
 
 export default () => (
   <>
-    <h1>
-      <Link to="/">numb86.net</Link>
-    </h1>
+    <Header />
     <ul>
       {LINK_LIST.map((l, index) => (
         <li key={index}>
