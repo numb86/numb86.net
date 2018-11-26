@@ -6,7 +6,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "lint": "yarn run eslint src/",
+    "lint:fix": "yarn run eslint src/ --fix"
   },
   "dependencies": {
     "gatsby": "^2.0.33",
