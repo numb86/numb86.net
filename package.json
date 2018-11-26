@@ -14,5 +14,8 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-numb": "^2.0.0"
+  }
 }
