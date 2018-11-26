@@ -6,7 +6,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "lint": "yarn run eslint src/",
+    "lint:fix": "yarn run eslint src/ --fix"
   },
   "dependencies": {
     "gatsby": "^2.0.33",
@@ -15,6 +17,7 @@
     "react-dom": "^16.5.1"
   },
   "devDependencies": {
-    "prettier": "^1.15.2"
+    "eslint": "^5.9.0",
+    "eslint-config-numb": "^2.0.0"
   }
 }
