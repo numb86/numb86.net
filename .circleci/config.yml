@@ -31,4 +31,4 @@ jobs:
           command: ./s3deploy -source=public/ -region=ap-northeast-1 -bucket=numb86.net
       - run:
           name: Cache clear
-          command: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
+          command: aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
