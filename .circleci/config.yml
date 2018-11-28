@@ -14,7 +14,9 @@ jobs:
             - dependencies-
       - run:
           name: Install
-          command: yarn install
+          commands:
+            - yarn install
+            - sudo pip install awscli
       - run:
           name: Run Lint
           command: yarn run eslint src/
@@ -28,4 +30,6 @@ jobs:
       - run: curl -L https://github.com/bep/s3deploy/releases/download/v2.0.1/s3deploy_2.0.1_Linux-64bit.tar.gz | tar xvz
       - run:
           name: deploy
-          command: ./s3deploy -source=public/ -region=ap-northeast-1 -bucket=numb86.net
+          commands:
+            - ./s3deploy -source=public/ -region=ap-northeast-1 -bucket=numb86.net
+            - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
