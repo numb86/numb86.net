@@ -15,6 +15,7 @@ const LINK_LIST = [
 export default () => (
   <>
     <Header />
+    <h2>Link</h2>
     <ul>
       {LINK_LIST.map(l => (
         <li key={l.url}>
