@@ -25,8 +25,12 @@ jobs:
       - run:
           name: Gatsby build site
           command: yarn build
-      - run: curl -L https://github.com/bep/s3deploy/releases/download/v2.2.0/s3deploy_2.2.0_Linux-64bit.tar.gz | tar xvz
       - run:
-          name: deploy
-          command: ./s3deploy -source=public/ -region=ap-northeast-1
-                    -distribution-id=$CLOUDFRONT_DISTRIBUTION_ID -bucket=numb86.net
+          name: Install awscli
+          command: sudo apt install -y python-pip python-dev && sudo pip install awscli
+      - run:
+          name:  Deploy to S3
+          command: aws s3 sync public/ s3://numb86.net --delete
+      - run:
+          name:  Cache clear
+          command: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
