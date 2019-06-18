@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 
 import Header from '../components/header';
 
@@ -16,6 +17,10 @@ const LINK_LIST = [
 
 export default () => (
   <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>numb86.net</title>
+    </Helmet>
     <Header />
     <img src={avator} alt="アバター" />
     <h2>Link</h2>
