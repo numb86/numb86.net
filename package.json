@@ -20,5 +20,8 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-config-numb": "^4.0.0"
+  },
+  "resolutions": {
+    "lodash": "^4.17.13"
   }
 }
