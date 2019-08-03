@@ -6,7 +6,7 @@ import Header from '../components/header';
 import avator from '../images/avator.png';
 
 const LINK_LIST = [
-  {text: '技術ブログ', url: 'http://numb86-tech.hatenablog.com/'},
+  {text: '技術ブログ', url: 'https://numb86-tech.hatenablog.com/'},
   {text: 'Twitter', url: 'https://twitter.com/numb_86'},
   {text: 'GitHub', url: 'https://github.com/numb86'},
   {
