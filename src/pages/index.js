@@ -16,8 +16,11 @@ export default () => {
   const [, setCookie] = useCookies([]);
 
   useEffect(() => {
-    setCookie('noSpecifyDomainCookie', '111', {maxAge: 20});
-    setCookie('specifyDomainCookie', '222', {maxAge: 20, domain: 'numb86.net'});
+    setCookie('noSpecifyDomainCookie', '111', {maxAge: 180});
+    setCookie('specifyDomainCookie', '222', {
+      maxAge: 180,
+      domain: 'numb86.net',
+    });
   }, []);
 
   return (
